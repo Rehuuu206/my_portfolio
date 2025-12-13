@@ -3,6 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial, Float, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 import { motion } from 'framer-motion';
+import ResumeButton from './ResumeButton';
 
 function AnimatedSphere() {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -154,6 +155,15 @@ export default function Hero3D() {
             >
               Contact Me
             </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="pt-4"
+          >
+            <ResumeButton variant="ghost" />
           </motion.div>
         </motion.div>
 
