@@ -166,25 +166,6 @@ export default function Hero3D() {
             <ResumeButton variant="ghost" />
           </motion.div>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <div className="flex flex-col items-center gap-2 text-muted-foreground">
-            <span className="text-sm tracking-widest uppercase">Scroll</span>
-            <div className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-1.5 h-3 bg-primary rounded-full mt-2"
-              />
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
