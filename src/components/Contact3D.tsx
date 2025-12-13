@@ -3,8 +3,9 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Send } from 'lucide-react';
+import { Github, Linkedin, Mail, Send, FileText } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import ResumeButton from './ResumeButton';
 
 function AnimatedContactSphere() {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -60,7 +61,8 @@ export default function Contact3D() {
   const socialLinks = [
     { icon: Github, href: "https://github.com", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:hello@example.com", label: "Email" }
+    { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+    { icon: FileText, href: "#", label: "Resume", isResume: true }
   ];
 
   return (
@@ -205,9 +207,14 @@ export default function Contact3D() {
               </motion.button>
             </form>
 
+            {/* Download Resume */}
+            <div className="mt-6 flex justify-center">
+              <ResumeButton variant="ghost" />
+            </div>
+
             {/* Social links for mobile */}
-            <div className="flex justify-center gap-4 mt-8 lg:hidden">
-              {socialLinks.map((link) => (
+            <div className="flex justify-center gap-4 mt-6 lg:hidden">
+              {socialLinks.filter(link => !('isResume' in link)).map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
