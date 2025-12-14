@@ -20,7 +20,7 @@ function AnimatedContactSphere() {
   return (
     <Sphere ref={meshRef} args={[1, 64, 64]} scale={1.5}>
       <MeshDistortMaterial
-        color="#00ffff"
+        color="#ffffff"
         attach="material"
         distort={0.5}
         speed={3}
@@ -98,8 +98,8 @@ export default function Contact3D() {
           >
             <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
               <ambientLight intensity={0.5} />
-              <pointLight position={[10, 10, 10]} intensity={1} color="#00ffff" />
-              <pointLight position={[-10, -10, -10]} intensity={0.5} color="#00e676" />
+              <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
+              <pointLight position={[-10, -10, -10]} intensity={0.5} color="#888888" />
               <AnimatedContactSphere />
             </Canvas>
 
