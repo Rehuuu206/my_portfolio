@@ -66,7 +66,7 @@ export default function Contact3D() {
   ];
 
   return (
-    <section id="contact" className="relative section-padding overflow-hidden">
+    <section id="contact" className="relative section-padding overflow-hidden snap-section">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-background via-primary/5 to-transparent" />
       

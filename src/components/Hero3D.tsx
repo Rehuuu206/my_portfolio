@@ -75,7 +75,7 @@ function ParticleField() {
 
 export default function Hero3D() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden snap-section">
       {/* 3D Canvas */}
       <div className="absolute inset-0">
         <Canvas
