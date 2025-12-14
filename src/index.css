@@ -66,6 +66,12 @@
     scroll-behavior: smooth;
   }
 
+  @media (min-width: 768px) {
+    html {
+      scroll-snap-type: y proximity;
+    }
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', system-ui, sans-serif;
@@ -138,6 +144,19 @@
   /* Section styles */
   .section-padding {
     @apply py-24 md:py-32 lg:py-40;
+  }
+
+  /* Snap section */
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+      scroll-snap-type: none;
+    }
   }
 
   /* Tilt card effect */

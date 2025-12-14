@@ -93,7 +93,7 @@ export default function ExperienceTimeline() {
     <section 
       ref={containerRef}
       id="experience" 
-      className="relative section-padding overflow-hidden"
+      className="relative section-padding overflow-hidden snap-section"
     >
       {/* Background elements */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />

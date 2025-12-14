@@ -168,7 +168,7 @@ export default function ProjectsParallax() {
     <section 
       ref={containerRef}
       id="projects" 
-      className="relative section-padding overflow-hidden"
+      className="relative section-padding overflow-hidden snap-section"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />

@@ -119,7 +119,7 @@ export default function Skills3D() {
   ];
 
   return (
-    <section id="skills" className="relative section-padding overflow-hidden">
+    <section id="skills" className="relative section-padding overflow-hidden snap-section">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px]" />
       
