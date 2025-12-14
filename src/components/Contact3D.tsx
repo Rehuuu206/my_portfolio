@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Send, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, Send, FileText, Twitter, Instagram } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import ResumeButton from './ResumeButton';
 
@@ -59,10 +59,10 @@ export default function Contact3D() {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
-    { icon: FileText, href: "#", label: "Resume", isResume: true }
+    { icon: Github, href: "https://github.com/", label: "GitHub" },
+    { icon: Twitter, href: "https://x.com/home", label: "X" },
+    { icon: Instagram, href: "https://www.instagram.com/", label: "Instagram" },
+    { icon: Mail, href: "mailto:hello@example.com", label: "Email" }
   ];
 
   return (
