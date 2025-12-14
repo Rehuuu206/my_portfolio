@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero3D from '@/components/Hero3D';
 import AboutParallax from '@/components/AboutParallax';
@@ -6,10 +7,14 @@ import ProjectsParallax from '@/components/ProjectsParallax';
 import ExperienceTimeline from '@/components/ExperienceTimeline';
 import Contact3D from '@/components/Contact3D';
 import SEO from '@/components/SEO';
+import Preloader from '@/components/Preloader';
 
 const Index = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <>
+      <Preloader onComplete={() => setIsLoaded(true)} />
       <SEO />
       <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
         {/* Noise overlay */}
