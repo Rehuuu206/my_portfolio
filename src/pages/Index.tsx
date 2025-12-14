@@ -8,6 +8,7 @@ import ExperienceTimeline from '@/components/ExperienceTimeline';
 import Contact3D from '@/components/Contact3D';
 import SEO from '@/components/SEO';
 import Preloader from '@/components/Preloader';
+import Background3D from '@/components/Background3D';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,6 +18,9 @@ const Index = () => {
       <Preloader onComplete={() => setIsLoaded(true)} />
       <SEO />
       <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
+        {/* 3D Background */}
+        <Background3D />
+        
         {/* Noise overlay */}
         <div className="fixed inset-0 noise-overlay pointer-events-none z-50" />
         
