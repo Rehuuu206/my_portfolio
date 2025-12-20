@@ -19,7 +19,7 @@ function AnimatedSphere() {
     <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
       <Sphere ref={meshRef} args={[1.5, 64, 64]} scale={2}>
         <MeshDistortMaterial
-          color="#ffffff"
+          color="#00ffff"
           attach="material"
           distort={0.4}
           speed={2}
@@ -64,7 +64,7 @@ function ParticleField() {
       </bufferGeometry>
       <pointsMaterial
         size={0.02}
-        color="#ffffff"
+        color="#00ffff"
         transparent
         opacity={0.6}
         sizeAttenuation
@@ -75,7 +75,7 @@ function ParticleField() {
 
 export default function Hero3D() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden snap-section">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* 3D Canvas */}
       <div className="absolute inset-0">
         <Canvas
@@ -83,8 +83,8 @@ export default function Hero3D() {
           style={{ background: 'transparent' }}
         >
           <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
-          <pointLight position={[-10, -10, -10]} intensity={0.5} color="#888888" />
+          <pointLight position={[10, 10, 10]} intensity={1} color="#00ffff" />
+          <pointLight position={[-10, -10, -10]} intensity={0.5} color="#00e676" />
           <AnimatedSphere />
           <ParticleField />
           <Stars radius={100} depth={50} count={1000} factor={4} saturation={0} fade speed={1} />

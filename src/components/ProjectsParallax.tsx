@@ -9,8 +9,6 @@ interface Project {
   features: string[];
   techStack: string[];
   color: string;
-  githubUrl: string;
-  liveUrl: string;
 }
 
 const projects: Project[] = [
@@ -25,9 +23,7 @@ const projects: Project[] = [
       "Real-time updates"
     ],
     techStack: ["Python", "HTML/CSS", "Database", "Maps API"],
-    color: "#ffffff",
-    githubUrl: "https://github.com/",
-    liveUrl: "#"
+    color: "#00e676"
   },
   {
     id: 2,
@@ -40,9 +36,7 @@ const projects: Project[] = [
       "Emergency contacts"
     ],
     techStack: ["Python", "UI/UX", "GPS API", "Notifications"],
-    color: "#ffffff",
-    githubUrl: "https://github.com/",
-    liveUrl: "#"
+    color: "#00ffff"
   }
 ];
 
@@ -100,22 +94,12 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             />
           </div>
           <div className="flex gap-3">
-            <a 
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 glass rounded-lg hover:bg-primary/10 transition-colors"
-            >
+            <button className="p-2 glass rounded-lg hover:bg-primary/10 transition-colors">
               <Github className="w-5 h-5" />
-            </a>
-            <a 
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 glass rounded-lg hover:bg-primary/10 transition-colors"
-            >
+            </button>
+            <button className="p-2 glass rounded-lg hover:bg-primary/10 transition-colors">
               <ExternalLink className="w-5 h-5" />
-            </a>
+            </button>
           </div>
         </div>
 
@@ -184,7 +168,7 @@ export default function ProjectsParallax() {
     <section 
       ref={containerRef}
       id="projects" 
-      className="relative section-padding overflow-hidden snap-section"
+      className="relative section-padding overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />

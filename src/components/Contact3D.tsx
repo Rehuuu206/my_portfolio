@@ -20,7 +20,7 @@ function AnimatedContactSphere() {
   return (
     <Sphere ref={meshRef} args={[1, 64, 64]} scale={1.5}>
       <MeshDistortMaterial
-        color="#ffffff"
+        color="#00ffff"
         attach="material"
         distort={0.5}
         speed={3}
@@ -66,7 +66,7 @@ export default function Contact3D() {
   ];
 
   return (
-    <section id="contact" className="relative section-padding overflow-hidden snap-section">
+    <section id="contact" className="relative section-padding overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-background via-primary/5 to-transparent" />
       
@@ -98,8 +98,8 @@ export default function Contact3D() {
           >
             <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
               <ambientLight intensity={0.5} />
-              <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
-              <pointLight position={[-10, -10, -10]} intensity={0.5} color="#888888" />
+              <pointLight position={[10, 10, 10]} intensity={1} color="#00ffff" />
+              <pointLight position={[-10, -10, -10]} intensity={0.5} color="#00e676" />
               <AnimatedContactSphere />
             </Canvas>
 

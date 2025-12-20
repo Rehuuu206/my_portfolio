@@ -23,7 +23,7 @@ export default function AboutParallax() {
     <section 
       ref={containerRef}
       id="about"
-      className="relative section-padding overflow-hidden snap-section"
+      className="relative section-padding overflow-hidden"
     >
       {/* Background elements */}
       <motion.div 
