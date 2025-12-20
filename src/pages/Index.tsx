@@ -9,6 +9,7 @@ import Contact3D from '@/components/Contact3D';
 import SEO from '@/components/SEO';
 import Preloader from '@/components/Preloader';
 import Background3D from '@/components/Background3D';
+import PostsSection from '@/components/PostsSection';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,6 +35,7 @@ const Index = () => {
           <Skills3D />
           <ProjectsParallax />
           <ExperienceTimeline />
+          <PostsSection />
           <Contact3D />
         </main>
       </div>
