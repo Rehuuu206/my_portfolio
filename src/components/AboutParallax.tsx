@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import profilePhoto from '@/assets/profile-photo.png';
 
 export default function AboutParallax() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -61,11 +62,11 @@ export default function AboutParallax() {
               <div className="absolute inset-16 border border-primary/40 rounded-full animate-rotate-slow" style={{ animationDuration: '25s' }} />
               
               {/* Center content - Profile Photo */}
-              <div className="absolute inset-24 rounded-full flex items-center justify-center glow-primary overflow-hidden">
+              <div className="absolute inset-20 rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
                 <img 
-                  src="/images/profile-photo.heic" 
+                  src={profilePhoto}
                   alt="Rehan Mulla" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 
