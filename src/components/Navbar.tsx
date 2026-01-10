@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Github, Instagram, Twitter } from 'lucide-react';
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -8,6 +8,12 @@ const navLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Journey" },
   { href: "#contact", label: "Contact" }
+];
+
+const socialLinks = [
+  { href: "https://github.com/", icon: Github, label: "GitHub" },
+  { href: "https://www.instagram.com/", icon: Instagram, label: "Instagram" },
+  { href: "https://x.com/home", icon: Twitter, label: "Twitter" }
 ];
 
 export default function Navbar() {
@@ -58,6 +64,23 @@ export default function Navbar() {
             ))}
           </ul>
 
+          {/* Social Links - Desktop */}
+          <div className="hidden md:flex items-center gap-4">
+            {socialLinks.map((social) => (
+              <motion.a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                aria-label={social.label}
+              >
+                <social.icon className="w-5 h-5" />
+              </motion.a>
+            ))}
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -105,6 +128,23 @@ export default function Navbar() {
                   </motion.li>
                 ))}
               </ul>
+              
+              {/* Social Links - Mobile */}
+              <div className="flex items-center gap-6 mt-8">
+                {socialLinks.map((social) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-6 h-6" />
+                  </motion.a>
+                ))}
+              </div>
             </nav>
           </motion.div>
         )}
