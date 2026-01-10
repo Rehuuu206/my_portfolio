@@ -60,9 +60,13 @@ export default function AboutParallax() {
               <div className="absolute inset-8 border border-primary/30 rounded-full animate-rotate-slow" style={{ animationDirection: 'reverse', animationDuration: '30s' }} />
               <div className="absolute inset-16 border border-primary/40 rounded-full animate-rotate-slow" style={{ animationDuration: '25s' }} />
               
-              {/* Center content */}
-              <div className="absolute inset-24 glass rounded-full flex items-center justify-center glow-primary">
-                <span className="font-display text-6xl font-bold text-gradient">RM</span>
+              {/* Center content - Profile Photo */}
+              <div className="absolute inset-24 rounded-full flex items-center justify-center glow-primary overflow-hidden">
+                <img 
+                  src="/images/profile-photo.heic" 
+                  alt="Rehan Mulla" 
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating badges */}
