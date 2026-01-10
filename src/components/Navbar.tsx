@@ -58,15 +58,6 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* CTA Button */}
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="hidden md:block px-5 py-2 bg-primary text-primary-foreground rounded-full font-display text-sm font-medium"
-          >
-            Hire Me
-          </motion.a>
 
           {/* Mobile Menu Button */}
           <button
@@ -114,16 +105,6 @@ export default function Navbar() {
                   </motion.li>
                 ))}
               </ul>
-              <motion.a
-                href="#contact"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="inline-block mt-8 px-8 py-3 bg-primary text-primary-foreground rounded-full font-display font-semibold"
-              >
-                Hire Me
-              </motion.a>
             </nav>
           </motion.div>
         )}
